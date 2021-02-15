@@ -12,6 +12,10 @@ body {
     display: inline-block;
 }
 
+.img-logo {
+    width: 10rem;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

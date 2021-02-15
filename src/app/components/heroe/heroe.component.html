@@ -1,10 +1,10 @@
-<h1>{{heroe.nombre}} <small>{{heroe.aparicion}}</small></h1>
+<h1 class="animated fadeIn">{{heroe.nombre}} <small>({{heroe.aparicion | date:'yyyy'}})</small></h1>
 <br>
-<div class="row">
+<div class="row animated fadeIn fast">
     <div class="col-md-4">
-        <img [src]="heroe.rutaImagen" class="img-fluid" alt="">
+        <img [src]="heroe.rutaImagen" class="img-fluid" [alt]="heroe.nombre">
         <br><br>
-        <a href="" class="btn btn-outline-danger btn-block">Regresar</a>
+        <a (click)="goHome()" class="btn btn-outline-danger btn-block">Regresar</a>
     </div>
     <div class="col-md-8">
         <h3>{{heroe.nombre}}</h3>
@@ -13,7 +13,10 @@
             {{heroe.biografia}}
         </p>
         <div>
-            <img src="" alt="">
+            <img *ngIf="heroe.casa == marvel" src="assets/img/marvel-logo.png" class="img-logo" [alt]="heroe.casa">
+            <img *ngIf="heroe.casa == dc" src="assets/img/dc-logo.jpg" class="img-logo" [alt]="heroe.casa">
         </div>
+
+
     </div>
 </div>

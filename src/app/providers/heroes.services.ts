@@ -57,7 +57,12 @@ export class HeroesService {
      console.log('Servicio listo para usarse.');
 
     }
-    public getHeroes(): Heroe[]{
+     getHeroes(): Heroe[]{
         return this.heroes;
+    }
+
+     getHeroe(index: string): Heroe{
+       const indice = parseInt(index, 10);
+       return this.heroes[indice];
     }
 }

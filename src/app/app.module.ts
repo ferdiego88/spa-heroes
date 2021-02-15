@@ -8,8 +8,11 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 
-// Rutas
+// Routes
 import { FeatureRoutingModule} from './app.routes';
+
+// Providers
+import { HeroesService } from './providers/heroes.services';
 
 
 @NgModule({
@@ -24,7 +27,9 @@ import { FeatureRoutingModule} from './app.routes';
     BrowserModule,
     FeatureRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

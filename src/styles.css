@@ -4,6 +4,10 @@
     margin-top: 20px;
 }
 
+.card-columns {
+    display: inline-block;
+}
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;

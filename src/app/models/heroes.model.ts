@@ -3,7 +3,8 @@ export class Heroe {
                 public biografia: string,
                 public rutaImagen: string,
                 public aparicion: string,
-                public casa: string, ){
+                public casa: string,
+                public idx?: number ){
 
     }
 }

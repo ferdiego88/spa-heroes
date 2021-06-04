@@ -1,0 +1,52 @@
+<form>
+  <h2>Registro de Nuevo Personal</h2>
+  <hr>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input #dni type="text" class="form-control" (keyup.enter)="buscarPersonal(dni.value)" placeholder="Ingrese DNI">
+    </div>
+    <div class="form-group col-md-6">
+      <button (click)="buscarPersonal(dni.value)" type="button" class="btn btn-primary btn-block">Buscar</button>
+    </div>
+    <div *ngIf="noExiste" class="col-md-12 alert alert-danger" role="alert">
+      {{ mensajeError }}
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Nombres</label>
+      <input type="email" class="form-control" id="inputEmail4" [value]="nombres">
+    </div>
+    <div class="form-group col-md-6">
+      <label >Apellidos</label>
+      <input type="text" class="form-control"  [value]="apellidosConcatenados">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Dirección</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="email">Correo <span class="text-muted">(Opcional)</span></label>
+    <input type="email" class="form-control" id="email" placeholder="tucorreo@ejemplo.com">
+    <div class="invalid-feedback">
+      Por favor, ingresa una dirección de correo electronica válida.
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputCity">Cargo</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Fecha de Nacimiento</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-4">
+      <label >Celular</label>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary btn-block">Registrar</button>
+</form>

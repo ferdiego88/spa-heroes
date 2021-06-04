@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import {HttpClientModule } from '@angular/common/http';
+
 // Componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -17,6 +19,7 @@ import { FeatureRoutingModule} from './app.routes';
 
 // Providers
 import { HeroesService } from './providers/heroes.services';
+import { PersonalComponent } from './components/mantenimiento/personal/personal.component';
 
 
 
@@ -30,10 +33,12 @@ import { HeroesService } from './providers/heroes.services';
     HeroeComponent,
     BuscarheroeComponent,
     HeroeTarjetaComponent,
+    PersonalComponent,
   ],
   imports: [
     BrowserModule,
-    FeatureRoutingModule
+    FeatureRoutingModule,
+    HttpClientModule
   ],
   providers: [
     HeroesService

@@ -5,6 +5,7 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BuscarheroeComponent } from './components/buscarheroe/buscarheroe.component';
+import { PersonalComponent } from './components/mantenimiento/personal/personal.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'heroes', component: HeroesComponent },
     { path: 'heroe/:id', component: HeroeComponent },
     { path: 'buscaheroe/:termino', component: BuscarheroeComponent },
+    { path: 'personal', component: PersonalComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 
     // { path: 'path/:routeParam', component: MyComponent },

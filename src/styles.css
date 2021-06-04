@@ -8,6 +8,12 @@ body {
     margin-top: 20px;
 }
 
+.centrado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .card-columns {
     display: inline-block;
 }
